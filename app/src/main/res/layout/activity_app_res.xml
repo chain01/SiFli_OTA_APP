@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".modules.watchface.PushFileActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="vertical"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:text="Make Res Bin"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mac Address"/>
+                <TextView
+                    android:id="@+id/sf_app_res_mac_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="---"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_margin="5dp"
+                    android:id="@+id/sf_app_res_file_select_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:textSize="13sp"
+                    android:text="SELECT Photo" />
+                <TextView
+                    android:id="@+id/sf_app_res_file_filename_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="---"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/sf_333333"
+                    android:text="APP_ID"/>
+
+                <EditText
+                    android:id="@+id/sf_app_res_app_id_et"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"
+                    android:text="app_xht"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/sf_333333"
+                    android:text="UID"/>
+
+                <EditText
+                    android:id="@+id/sf_app_res_UID_et"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"
+                    android:text="00000004"/>
+                <TextView
+                    android:id="@+id/sf_app_res_more_tv"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/round_border_blue_10"
+                    android:layout_marginLeft="10dp"
+                    android:textAlignment="center"
+
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:text="more"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/sf_app_res_more_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/sf_333333"
+                        android:text="Clip Size"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="10dp"
+                        android:text="width"
+                        />
+                    <EditText
+                        android:id="@+id/sf_app_res_width_et"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16sp"
+                        android:text="240"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="10dp"
+                        android:text="height"
+                        />
+                    <EditText
+                        android:id="@+id/sf_app_res_height_et"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16sp"
+                        android:text="240"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/sf_333333"
+                        android:text="eZip"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Color"
+                        />
+                    <EditText
+                        android:id="@+id/sf_app_res_ezip_color_et"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15sp"
+                        android:text="rgb565"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="40dp"
+                        android:text="alpha"
+                        />
+                    <EditText
+                        android:id="@+id/sf_app_res_ezip_alpha_et"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16sp"
+                        android:text="1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="10dp"
+                        android:text="rotation"
+                        />
+                    <EditText
+                        android:id="@+id/sf_app_res_ezip_rotation_et"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16sp"
+                        android:text="1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="10dp"
+                        android:text="boardType"
+                        />
+                    <EditText
+                        android:id="@+id/sf_app_res_ezip_boardType_et"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16sp"
+                        android:text="2"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/sf_333333"
+                        android:text="Watch Path"/>
+
+                    <EditText
+                        android:id="@+id/sf_app_res_watch_path_et"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15sp"
+                        android:text="gui_tool/tool_app/{app_id}/{uid}.bin"/>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+                <ScrollView
+                    android:id="@+id/sf_app_res_log_sv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/sf_app_res_log_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:background="@color/black"
+                        android:textColor="@color/white"
+                        android:gravity="start|bottom"
+                        android:lineSpacingExtra="5dp"
+                        android:scrollbars="none"
+                        android:text="--log--"
+                        android:textIsSelectable="true"
+                        android:textSize="10sp" />
+                </ScrollView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="05dp">
+                <TextView
+                    android:id="@+id/sf_app_res_progress_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="进度"/>
+
+                <ProgressBar
+                    android:id="@+id/sf_app_res_progress_pb"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="5dp"
+                    android:min="0"
+                    android:max="100"
+                    android:progress="00"
+                    android:layout_marginHorizontal="10dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="05dp">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="速度"/>
+                <TextView
+                    android:id="@+id/sf_app_res_speed_tv"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="瞬时 0 kb/s 平均 0 kb/s"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <TextView
+
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="操作" />
+
+                <Button
+                    android:layout_margin="5dp"
+                    android:id="@+id/sf_app_res_make_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:textSize="13sp"
+                    android:text="Make And Push" />
+
+                <Button
+                    android:layout_margin="5dp"
+                    android:id="@+id/sf_app_res_stop_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:textSize="13sp"
+                    android:text="Stop" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

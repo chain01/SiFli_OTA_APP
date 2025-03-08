@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    tools:context=".modules.debug.DebugHomeActivity">
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:paddingHorizontal="15dp"
+
+        android:gravity="center_vertical"
+        android:layout_height="56dp">
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:id="@+id/sf_debug_home_back_iv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:iiv_size="16dp"
+            app:iiv_color="@color/sf_666666"
+            app:iiv_icon="faw_chevron_left" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="开发者模式"
+            android:textColor="#333333"
+            android:textFontWeight="700"
+            android:textStyle="normal"
+            android:textSize="17sp"
+            />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <RelativeLayout
+                android:id="@+id/sf_debug_home_search_device_rl"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:paddingHorizontal="20dp"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/sf_333333"
+                    android:textSize="15sp"
+                    android:layout_marginTop="5dp"
+                    android:text="搜索蓝牙设备"/>
+
+                <TextView
+                    android:id="@+id/sf_debug_home_mac_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_alignParentRight="true"
+                    android:textSize="15sp"
+                    android:textColor="@color/sf_999999"
+                    android:text="00:00:00:00:00:00"/>
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_alignParentRight="true"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:iiv_size="16dp"
+                    app:iiv_color="@color/sf_999999"
+                    app:iiv_icon="faw_chevron_right" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/sf_debug_home_otav3_rl"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:paddingHorizontal="20dp"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/sf_333333"
+                    android:textSize="15sp"
+                    android:layout_marginTop="5dp"
+                    android:text="OTA V3"/>
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_alignParentRight="true"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:iiv_size="16dp"
+                    app:iiv_color="@color/sf_999999"
+                    app:iiv_icon="faw_chevron_right" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sf_debug_home_push_app_res_rl"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:paddingHorizontal="20dp"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/sf_333333"
+                    android:textSize="15sp"
+                    android:layout_marginTop="5dp"
+                    android:text="SiFliGUIBuilder APP 资源推送"/>
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_alignParentRight="true"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:iiv_size="16dp"
+                    app:iiv_color="@color/sf_999999"
+                    app:iiv_icon="faw_chevron_right" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sf_debug_home_push_sdk_file_rl"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:paddingHorizontal="20dp"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/sf_333333"
+                    android:textSize="15sp"
+                    android:layout_marginTop="5dp"
+                    android:text="SiFli-SDK OTA"/>
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_alignParentRight="true"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:iiv_size="16dp"
+                    app:iiv_color="@color/sf_999999"
+                    app:iiv_icon="faw_chevron_right" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

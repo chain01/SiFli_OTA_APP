@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/main_blue_1</item>
+    </style>
+
+    <style name="RoundGradientButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/rounded_gradient_button</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="RoundButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/rounded_button_selector</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:padding">5dp</item> <!-- 添加padding属性 -->
+    </style>
+</resources>

@@ -1,0 +1,59 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.sifli.sifliapp'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.sifli.sifliapp"
+        minSdk 24
+        targetSdk 33
+        versionCode 10
+        versionName "1.0.10"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def appName = "SiFli_APP_Demo" // 替换为你的应用名称
+            def versionName = variant.versionName
+            def buildType = variant.buildType.name
+            outputFileName = "${appName}-${buildType}-${versionName}.apk"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.aar'])
+    implementation 'com.sifli:siflicore:1.1.7'
+    implementation 'com.sifli:sifliotasdk:2.0.9'
+    implementation 'com.sifli:siflidfu:1.1.31'
+
+    implementation 'com.github.jenly1314:arcseekbar:1.1.1'
+    implementation 'com.mikepenz:iconics-core:5.3.4'
+    implementation 'com.mikepenz:fontawesome-typeface:5.9.0.0-kotlin'
+    implementation 'com.mikepenz:iconics-views:5.3.4'
+    implementation 'com.github.li-xiaojun:XPopup:2.10.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'com.github.yalantis:ucrop:2.2.10'
+}
