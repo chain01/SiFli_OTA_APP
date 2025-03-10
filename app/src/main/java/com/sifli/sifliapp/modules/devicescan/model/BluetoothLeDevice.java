@@ -189,6 +189,7 @@ public String getDeviceName() {
      *
      * @return the bluetooth device bond state
      */
+    @SuppressLint("MissingPermission")
     public String getBluetoothDeviceBondState() {
         return resolveBondingState(mDevice.getBondState());
     }
