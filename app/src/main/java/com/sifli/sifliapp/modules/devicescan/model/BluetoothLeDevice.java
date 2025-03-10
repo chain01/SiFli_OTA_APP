@@ -258,14 +258,13 @@ public String getDeviceName() {
             mRssiLog.put(timestamp, rssiReading);
         }
     }
-
+@SuppressLint("MissingPermission")
     public Set<BluetoothServiceType> getBluetoothDeviceKnownSupportedServices() {
         if (mServiceSet == null) {
             synchronized (this) {
                 if (mServiceSet == null) {
                     final Set<BluetoothServiceType> serviceSet = new HashSet<>();
                     for (final BluetoothServiceType service : BluetoothServiceType.values()) {
-                        @SuppressLint("MissingPermission")
                         if (mDevice.getBluetoothClass().hasService(service.getCode())) {
                             serviceSet.add(service);
                         }
