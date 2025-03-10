@@ -27,6 +27,7 @@ public class DeviceAdapter extends ArrayAdapter<BluetoothLeDevice> {
     }
 
     @Override
+    @SuppressLint("MissingPermission")
     public View getView(int position, View convertView, ViewGroup parent) {
 
         BluetoothLeDevice bluetoothLeDevice = getItem(position);//获取当前项的Fruit实例
