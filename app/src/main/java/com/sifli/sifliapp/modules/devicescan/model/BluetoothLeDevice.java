@@ -265,7 +265,7 @@ public String getDeviceName() {
                 if (mServiceSet == null) {
                     final Set<BluetoothServiceType> serviceSet = new HashSet<>();
                     for (final BluetoothServiceType service : BluetoothServiceType.values()) {
-
+                        @SuppressLint("MissingPermission")
                         if (mDevice.getBluetoothClass().hasService(service.getCode())) {
                             serviceSet.add(service);
                         }
@@ -283,6 +283,7 @@ public String getDeviceName() {
      *
      * @return the bluetooth device class name
      */
+    @SuppressLint("MissingPermission")
     public String getBluetoothDeviceClassName() {
         return BluetoothClassResolver.resolveDeviceClass(mDevice.getBluetoothClass().getDeviceClass());
     }
@@ -292,6 +293,7 @@ public String getDeviceName() {
      *
      * @return the bluetooth device major class name
      */
+    @SuppressLint("MissingPermission")
     public String getBluetoothDeviceMajorClassName() {
         return BluetoothClassResolver.resolveMajorDeviceClass(mDevice.getBluetoothClass().getMajorDeviceClass());
     }
