@@ -4,7 +4,7 @@ package com.sifli.sifliapp.modules.devicescan.adapter;
 
 
 import static com.sifli.sifliapp.modules.devicescan.model.BluetoothLeDevice.encodeHexStr;
-
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
