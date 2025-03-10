@@ -1,5 +1,5 @@
 package com.sifli.sifliapp.modules.devicescan.model;
-
+import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;
 import android.os.Bundle;
@@ -151,10 +151,10 @@ public class BluetoothLeDevice implements Parcelable {
      *
      * @return the name
      */
-    @SuppressLint("MissingPermission")
-    public String getName() {
-        return mDevice.getName();
-    }
+@SuppressLint("MissingPermission")
+public String getDeviceName() {
+    return mDevice.getName();
+}
 
     /**
      * Gets the address.
