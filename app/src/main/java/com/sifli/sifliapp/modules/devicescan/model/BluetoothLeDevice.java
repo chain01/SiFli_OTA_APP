@@ -151,14 +151,9 @@ public class BluetoothLeDevice implements Parcelable {
      *
      * @return the name
      */
+    @SuppressLint("MissingPermission")
     public String getName() {
-         if (ContextCompat.checkSelfPermission(context, Manifest.permission.BLUETOOTH_CONNECT)
-            == PackageManager.PERMISSION_GRANTED) {
         return mDevice.getName();
-    } else {
-        // 处理无权限情况（例如请求权限或返回默认值）
-        return "Unknown";
-    }
     }
 
     /**
